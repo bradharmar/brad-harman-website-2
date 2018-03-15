@@ -2,8 +2,8 @@ var content = ["About placeholder","Audio Placeholder","Video Placeholder", "Cod
 var displayContent = 0;
 
 $(".headerRad").on("click", function(){
-    displayContent == $(this).attr("value");
-    $("#currentContent").html(content[displayContent]);
+    displayContent == $("span.radButton").attr("value");
+    $("#currentContent").html("<p>"+content[displayContent]+"</p>");
     console.log(displayContent);
 })
 
@@ -11,19 +11,21 @@ $(".headerRad").on("click", function(){
 $("#leftArrow").on("click", function(){
     displayContent--;
     overflowCatch();
+    $("#currentContent").html("<p>"+content[displayContent]+"</p>");
 })
 
 $("#rightArrow").on("click", function(){
     displayContent++;
     overflowCatch();
+    $("#currentContent").html("<p>"+content[displayContent]+"</p>");
 })
 
 function overflowCatch(){
     if (displayContent < 0){
-        displayContent = 4;
+        displayContent = 3;
         return;
     }
-    else if (displayContent > 4){
+    else if (displayContent > 3){
         displayContent = 0;
         return;
     }
