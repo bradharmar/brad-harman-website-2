@@ -1,0 +1,68 @@
+body{
+    background-color: blanchedalmond;
+}
+
+h1{
+    font-family:josefin sans;
+    font-size:40px;
+    text-decoration: underline;
+}
+
+h6{
+    font-family:josefin sans;
+    font-size:12px;
+}
+
+p{
+    font-family:josefin sans;
+    font-size:16px;
+    padding-top:15px;
+}
+
+label{
+    display:block;
+    position:relative;
+    padding-left:25px;
+    font-family: josefin sans;
+    font-size:25px;
+    margin-right:20px;
+}
+
+#buttons input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radButton{
+    position: absolute;
+    top:5px;
+    left:0;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color:black;
+}
+
+.radButton:hover{
+    background-color: white;
+}
+
+#contentWindow{
+    margin-top:30px;
+}
+
+#contentWindow a{
+    color: black;
+    text-decoration:none;
+    font-family:josefin sans;
+    font-size:40px;
+}
+
+#contentWindow a:hover{
+    color:gray;
+}
+
+#currentContent{
+    background-color: lightgray;
+}

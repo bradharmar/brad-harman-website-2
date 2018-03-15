@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" >
+    
+<head>
+        <meta charset="UTF-8">
+    <title>BradHarman.com 2.0</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"> 
+</head>
+
+<body>
+    <div class="container">
+<h1>Brad Harman</h1>
+<br>
+<div class="row" id="buttons">
+    <div class="col-xs-3">
+        <label class="headerRad">About
+        <input type="radio" name="contentChoice" id="Radio0">
+        <span class="radButton" value="0"></span>
+        </label>
+    </div>
+    <div class="col-xs-3">
+            <label class="headerRad">Audio
+            <input type="radio" name="contentChoice" id="Radio1" >
+            <span class="radButton" value="1"></span>
+            </label>
+        </div>
+        <div class="col-xs-3">
+                <label class="headerRad">Video
+                <input type="radio" name="contentChoice" id="Radio2" >
+                <span class="radButton" value="2"></span>
+                </label>
+            </div>
+            <div class="col-xs-3">
+                    <label class="headerRad" value="3">Code
+                    <input type="radio" name="contentChoice" id="Radio3">
+                    <span class="radButton"></span>
+                    </label>
+                </div>
+</div>
+<div id="contentWindow">
+    <div class="row">
+        <div class="col-xs-1 text-right" id="leftArrow">
+<a><</a>
+        </div>
+        <div class="col-xs-10" id="currentContent">
+    <p>Current content placeholder</p>
+    </div>
+    <div class="col-xs-1" id="rightArrow">
+<a>></a>
+    </div>
+    </div>
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="index.js"></script>
+</body>
+
+
+<footer>
+    <div class="text-center">
+    <hr>
+    <h6>Designed & Coded by: Brad Harman</h6>
+    </div>
+</footer>
