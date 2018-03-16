@@ -61,6 +61,7 @@ label{
 
 #contentWindow a:hover{
     color:gray;
+    cursor: pointer;
 }
 
 #currentContent{
