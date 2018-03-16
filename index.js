@@ -1,23 +1,31 @@
 var content = ["About placeholder","Audio Placeholder","Video Placeholder", "Code Placeholder"];
 var displayContent = 0;
 
-$(".headerRad").on("click", function(){
-    displayContent == $("span.radButton").attr("value");
+$(".radButton").on("click", function(){
+    displayContent = $(this).attr("value");
+    $("#currentContent").fadeToggle("Slow",function(){
     $("#currentContent").html("<p>"+content[displayContent]+"</p>");
-    console.log(displayContent);
+});
+$("#currentContent").fadeToggle("slow");
 })
 
 
 $("#leftArrow").on("click", function(){
+    $("#currentContent").fadeToggle("Slow",function(){
     displayContent--;
     overflowCatch();
     $("#currentContent").html("<p>"+content[displayContent]+"</p>");
+    });
+    $("#currentContent").fadeToggle("slow");
 })
 
 $("#rightArrow").on("click", function(){
+    $("#currentContent").fadeToggle("Slow",function(){
     displayContent++;
     overflowCatch();
     $("#currentContent").html("<p>"+content[displayContent]+"</p>");
+});
+$("#currentContent").fadeToggle("slow");
 })
 
 function overflowCatch(){

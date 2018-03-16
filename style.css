@@ -46,6 +46,7 @@ label{
 
 .radButton:hover{
     background-color: white;
+    cursor: pointer;
 }
 
 #contentWindow{
@@ -66,4 +67,22 @@ label{
 
 #currentContent{
     background-color: lightgray;
+}
+
+.linkButton{
+    text-decoration: none;
+    color:white;
+    background-color: black;
+    font-size:40px;
+    margin: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding-top:5px;
+}
+
+.linkButton:hover{
+    color:black;
+    background-color: white;
+    text-decoration: none;
 }
