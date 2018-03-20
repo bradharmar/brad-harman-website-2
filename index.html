@@ -14,6 +14,8 @@
     <div class="container">
 <h1>Brad Harman</h1>
 <br>
+
+<!--Header buttons-->
 <div class="row" id="buttons">
     <div class="col-xs-3">
         <label class="headerRad">About
@@ -36,20 +38,45 @@
                     </label>
                 </div>
 </div>
+
+<!--Main content section-->
 <div id="contentWindow">
     <div class="row">
         <div class="col-xs-1 text-right" id="leftArrow">
 <a><</a>
         </div>
         <div class="col-xs-10" id="currentContent">
-    <p>Current content placeholder</p>
+    <p>Welcome to the newly renovated Brad Harman dot com. This website is a practical application of the web developments skills
+        I acquired while completing my Front End Web Development Certificate through FreeCodeCamp.org. If you'd like to hear more about my coding
+        experience, click the "Code" button at the top. Or click on one of the other buttons to learn about my other professional and volunteer experiences.
+    </p>
     </div>
     <div class="col-xs-1" id="rightArrow">
 <a>></a>
     </div>
     </div>
 </div>
+
+<!--Resume and Contact Form-->
+
+<div class="row">
+    <div class="col-md-offset-1 col-md-5">
+<p>A copy of my current resume can be found by clicking here.</p>
+    </div>
+    <div class="col-md-5">
+<form action="https://formspree.io/brad@bradharman.com" method="POST">
+    <p>Or, feel free to just fill out this form and I'll get back to you as soon as I can.</p>
+    <input type="text" class="form-control" placeholder="Your Name" required>
+    <input type="text" class="form-control" placeholder="Your Email" required>
+    <input type="text" class="form-control" placeholder="Phone Number (Optional)">
+    <input type="text" class="form-control" placeholder="Your Message" required>
+    <button type="submit" id="submitButton" value="send">Submit</button>
+</form>
+    </div>
 </div>
+</div>
+
+<br>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="index.js"></script>

@@ -86,3 +86,19 @@ label{
     background-color: white;
     text-decoration: none;
 }
+
+input{
+    font-family: josefin sans;
+    margin:10px;
+}
+
+#submitButton{
+    background-color: lightgray;
+    border:solid gray 1px;
+    border-radius: 5%;
+    margin-left:10px;
+}
+
+.message{
+    height: 200px;
+}
