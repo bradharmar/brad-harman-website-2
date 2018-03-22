@@ -1,95 +1,102 @@
 <!DOCTYPE html>
-<html lang="en" >
-    
+<html lang="en">
+
 <head>
-        <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <title>BradHarman.com 2.0</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S"
+        crossorigin="anonymous">
 </head>
 
 <body>
     <div class="container">
-<h1>Brad Harman</h1>
-<br>
-
-<!--Header buttons-->
-<div class="row" id="buttons">
-    <div class="col-xs-3">
-        <label class="headerRad">About
-                <button class="radButton" value="0">
-        </label>
-    </div>
-    <div class="col-xs-3">
-            <label class="headerRad">Audio
-                    <button class="radButton" value="1">
-            </label>
+        <div class="row">
+            <img id="headerImg" src="sources/businesstime.JPG">
+            <h1>Brad Harman</h1>
         </div>
-        <div class="col-xs-3">
-                <label class="headerRad">Video
-                        <button class="radButton" value="2">
+        <br>
+
+        <!--Header buttons-->
+        <div class="row" id="buttons">
+            <div class="col-xs-3">
+                <label class="headerRad">About
+                    <button class="radButton" value="0">
                 </label>
             </div>
             <div class="col-xs-3">
-                    <label class="headerRad" value="3">Code
-                            <button class="radButton" value="3">
-                    </label>
-                </div>
-</div>
-
-<!--Main content section-->
-<div id="contentWindow">
-    <div class="row">
-        <div class="col-xs-1 text-right" id="leftArrow">
-<a><</a>
+                <label class="headerRad">Audio
+                    <button class="radButton" value="1">
+                </label>
+            </div>
+            <div class="col-xs-3">
+                <label class="headerRad">Video
+                    <button class="radButton" value="2">
+                </label>
+            </div>
+            <div class="col-xs-3">
+                <label class="headerRad" value="3">Code
+                    <button class="radButton" value="3">
+                </label>
+            </div>
         </div>
-        <div class="col-xs-10" id="currentContent">
-    <p>Welcome to the newly renovated Brad Harman dot com. This website is a practical application of the web developments skills
-        I acquired while completing my Front End Web Development Certificate through FreeCodeCamp.org. If you'd like to hear more about my coding
-        experience, click the "Code" button at the top. Or click on one of the other buttons to learn about my other professional and volunteer experiences.
-    </p>
-    </div>
-    <div class="col-xs-1" id="rightArrow">
-<a>></a>
-    </div>
-    </div>
-</div>
 
-<!--Resume and Contact Form-->
+        <!--Main content section-->
+        <div id="contentWindow">
+            <div class="row">
+                <div class="col-xs-1 text-right" id="leftArrow">
+                    <a>
+                        <</a>
+                </div>
+                <div class="col-xs-10" id="currentContent">
+                    <p>Welcome to the newly renovated Brad Harman dot com. This website is a practical application of the web
+                        developments skills I acquired while completing my Front End Web Development Certificate through
+                        FreeCodeCamp.org. If you'd like to hear more about my coding experience, click the "Code" button
+                        at the top. Or click on one of the other buttons to learn about my other professional and volunteer
+                        experiences.
+                    </p>
+                </div>
+                <div class="col-xs-1" id="rightArrow">
+                    <a>></a>
+                </div>
+            </div>
+        </div>
 
-<div class="row">
-    <div class="col-md-offset-1 col-md-5">
-<p>A copy of my current resume can be found by clicking here.</p>
+        <!--Resume and Contact Form-->
+
+        <div class="row" id="bottomContent">
+            <div class="col-md-offset-1 col-md-5">
+                <p>A copy of my current resume can be found by clicking here.</p>
+            </div>
+            <div class="col-md-5">
+                <form action="https://formspree.io/brad@bradharman.com" method="POST">
+                    <p>Or, feel free to just fill out this form and I'll get back to you as soon as I can.</p>
+                    <input type="text" class="form-control" placeholder="Your Name" required>
+                    <input type="text" class="form-control" placeholder="Your Email" required>
+                    <input type="text" class="form-control" placeholder="Phone Number (Optional)">
+                    <input type="text" class="form-control" placeholder="Your Message" required>
+                    <button type="submit" id="submitButton" value="send">Submit</button>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="col-md-5">
-<form action="https://formspree.io/brad@bradharman.com" method="POST">
-    <p>Or, feel free to just fill out this form and I'll get back to you as soon as I can.</p>
-    <input type="text" class="form-control" placeholder="Your Name" required>
-    <input type="text" class="form-control" placeholder="Your Email" required>
-    <input type="text" class="form-control" placeholder="Phone Number (Optional)">
-    <input type="text" class="form-control" placeholder="Your Message" required>
-    <button type="submit" id="submitButton" value="send">Submit</button>
-</form>
-    </div>
-</div>
-</div>
 
-<br>
+    <br>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="index.js"></script>
 </body>
 
 
 <footer>
     <div class="text-center">
-    <h6>Designed & Coded by: Brad Harman</h6>
-    <div id="portfolio">
+        <h6>Designed & Coded by: Brad Harman</h6>
+        <div id="portfolio">
             <a href="https://www.linkedin.com/in/bradley-harman-ba7694a7/" target="_blank" class="linkButton fab fa-linkedin"></a>
             <a href="https://github.com/bradharmar" target="_blank" class="linkButton fab fa-github"></a>
             <a href="https://codepen.io/bradharmar/#" target="_blank" class="linkButton fab fa-codepen"></a>
-    </div>
         </div>
+    </div>
 </footer>

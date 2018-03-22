@@ -3,29 +3,29 @@ var displayContent = 0;
 
 $(".radButton").on("click", function(){
     displayContent = $(this).attr("value");
-    $("#currentContent").fadeToggle("Slow",function(){
+    $("#currentContent").animate({height:'toggle'},function(){
     $("#currentContent").html("<p>"+content[displayContent]+"</p>");
 });
-$("#currentContent").fadeToggle("slow");
+$("#currentContent").animate({height:'toggle'});
 })
 
 
 $("#leftArrow").on("click", function(){
-    $("#currentContent").fadeToggle("Slow",function(){
+    $("#currentContent").animate({height:'toggle'},function(){
     displayContent--;
     overflowCatch();
     $("#currentContent").html("<p>"+content[displayContent]+"</p>");
     });
-    $("#currentContent").fadeToggle("slow");
+    $("#currentContent").animate({height:'toggle'});
 })
 
 $("#rightArrow").on("click", function(){
-    $("#currentContent").fadeToggle("Slow",function(){
+    $("#currentContent").animate({height:'toggle'},function(){
     displayContent++;
     overflowCatch();
     $("#currentContent").html("<p>"+content[displayContent]+"</p>");
 });
-$("#currentContent").fadeToggle("slow");
+$("#currentContent").animate({height:'toggle'});
 })
 
 function overflowCatch(){

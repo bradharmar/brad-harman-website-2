@@ -4,8 +4,18 @@ body{
 
 h1{
     font-family:josefin sans;
-    font-size:40px;
+    font-size:60px;
     text-decoration: underline;
+    padding-top:50px;
+}
+
+#headerImg{
+height:150px;
+width: 150px;
+border-radius:50%;
+position: relative;
+float: left;
+margin-right:20px;
 }
 
 h6{
@@ -101,4 +111,8 @@ input{
 
 .message{
     height: 200px;
+}
+
+#bottomContent{
+    position: relative;
 }
