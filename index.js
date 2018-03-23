@@ -1,43 +1,53 @@
-var content = ["About placeholder","Audio Placeholder","Video Placeholder", "Code Placeholder"];
 var displayContent = 0;
 
-$(".radButton").on("click", function(){
-    displayContent = $(this).attr("value");
-    $("#currentContent").animate({height:'toggle'},function(){
-    $("#currentContent").html("<p>"+content[displayContent]+"</p>");
-});
-$("#currentContent").animate({height:'toggle'});
-})
+$(document).ready( function(){
+$(".currentContent").hide();
+$("#content0").show();
 
-
-$("#leftArrow").on("click", function(){
-    $("#currentContent").animate({height:'toggle'},function(){
-    displayContent--;
-    overflowCatch();
-    $("#currentContent").html("<p>"+content[displayContent]+"</p>");
+$(".radButton").on("click", function () {
+    var tempButton = $(this).attr("value");
+    $(".contentFocus").animate({ height: 'toggle'}, "slow", "swing", function () {
+        $("#content" + displayContent).hide();
+        displayContent = tempButton;
+        $("#content" + displayContent).show();
     });
-    $("#currentContent").animate({height:'toggle'});
+    $(".contentFocus").animate({ height: 'toggle' }, "slow", "swing");
 })
 
-$("#rightArrow").on("click", function(){
-    $("#currentContent").animate({height:'toggle'},function(){
-    displayContent++;
-    overflowCatch();
-    $("#currentContent").html("<p>"+content[displayContent]+"</p>");
-});
-$("#currentContent").animate({height:'toggle'});
+
+$("#leftArrow").on("click", function () {
+    $(".contentFocus").animate({ height: 'toggle'}, "slow", "swing", function () {
+        $("#content" + displayContent).hide();
+        displayContent--;
+        overflowCatch();
+        $("#content" + displayContent).show();
+    });
+    $(".contentFocus").animate({ height: 'toggle'}, "slow", "swing");
 })
 
-function overflowCatch(){
-    if (displayContent < 0){
-        displayContent = 3;
+$("#rightArrow").on("click", function () {
+    $(".contentFocus").animate({ height: 'toggle'}, "slow", "swing", function () {
+        $("#content" + displayContent).hide();
+        displayContent++;
+        overflowCatch();
+        $("#content" + displayContent).show();
+    });
+    $(".contentFocus").animate({ height: 'toggle'}, "slow", "swing");
+})
+
+})
+
+
+function overflowCatch() {
+    if (displayContent < 1) {
+        displayContent = 4;
         return;
     }
-    else if (displayContent > 3){
-        displayContent = 0;
+    else if (displayContent > 4) {
+        displayContent = 1;
         return;
     }
-    else{
+    else {
         return;
     }
 }
