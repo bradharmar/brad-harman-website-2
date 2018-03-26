@@ -1,38 +1,33 @@
 var displayContent = 0;
+var tempDisplay = 0;
 
 $(document).ready( function(){
+    hashCatch();
 $(".currentContent").hide();
-$("#content0").show();
+$("#content" + displayContent).show();
 
-$(".radButton").on("click", function () {
-    var tempButton = $(this).attr("value");
-    $(".contentFocus").animate({ height: 'toggle'}, "slow", "swing", function () {
-        $("#content" + displayContent).hide();
-        displayContent = tempButton;
+$(window).on("hashchange", function(event){
+    $(".contentFocus").animate({ height: 'toggle'}, 'slow', 'swing', function () {
+        $("#content" + tempDisplay).hide();
+        hashCatch();
         $("#content" + displayContent).show();
-    });
-    $(".contentFocus").animate({ height: 'toggle' }, "slow", "swing");
+      });
+    $(".contentFocus").animate({ height: 'toggle'}, 'slow', 'swing');
 })
 
 
 $("#leftArrow").on("click", function () {
-    $(".contentFocus").animate({ height: 'toggle'}, "slow", "swing", function () {
-        $("#content" + displayContent).hide();
+    tempDisplay = displayContent;
         displayContent--;
         overflowCatch();
-        $("#content" + displayContent).show();
-    });
-    $(".contentFocus").animate({ height: 'toggle'}, "slow", "swing");
+        hashReverse();
 })
 
 $("#rightArrow").on("click", function () {
-    $(".contentFocus").animate({ height: 'toggle'}, "slow", "swing", function () {
-        $("#content" + displayContent).hide();
+    tempDisplay = displayContent;
         displayContent++;
         overflowCatch();
-        $("#content" + displayContent).show();
-    });
-    $(".contentFocus").animate({ height: 'toggle'}, "slow", "swing");
+        hashReverse();
 })
 
 })
@@ -49,5 +44,37 @@ function overflowCatch() {
     }
     else {
         return;
+    }
+}
+
+function hashCatch() {
+switch(location.hash){
+    case "#About":
+    displayContent = 1;
+    break;
+    case "#Audio":
+    displayContent = 2;
+    break
+    case "#Video":
+    displayContent = 3;
+    break;
+    case "#Code":
+    displayContent = 4;
+}
+}
+
+function hashReverse() {
+    switch(displayContent){
+    case 1:
+    location.replace("#About");
+    break;
+    case 2:
+    location.replace("#Audio");
+    break;
+    case 3:
+    location.replace("#Video");
+    break;
+    case 4:
+    location.replace("#Code");
     }
 }

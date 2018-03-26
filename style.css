@@ -11,12 +11,12 @@ h1{
 }
 
 #headerImg{
-height:150px;
-width: 150px;
-border-radius:50%;
-position: relative;
-float: left;
-margin-right:20px;
+    height:150px;
+    width: 150px;
+    border-radius:50%;
+    position: relative;
+    float: left;
+    margin-right:20px;
 }
 
 h6{
@@ -30,18 +30,18 @@ p{
     padding-top:15px;
 }
 
-label{
+#buttons a{
     display:block;
     position:relative;
     padding-left:25px;
     font-family: josefin sans;
     font-size:25px;
     margin-right:20px;
+    color: black;
+    text-decoration: none;
 }
 
-#buttons input{
-    position: absolute;
-    opacity: 0;
+#buttons a:hover{
     cursor: pointer;
 }
 
