@@ -138,3 +138,11 @@ color: black;
 .contentFocus a:hover{
     color:white;
 }
+
+#bottomContent a{
+    color: black;
+}
+
+#bottomContent a:hover{
+    color: white;
+}
