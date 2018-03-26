@@ -8,6 +8,7 @@ $("#content" + displayContent).show();
 
 $(window).on("hashchange", function(event){
     $(".contentFocus").animate({ height: 'toggle'}, 'slow', 'swing', function () {
+        tempDisplay = displayContent;
         $("#content" + tempDisplay).hide();
         hashCatch();
         $("#content" + displayContent).show();
