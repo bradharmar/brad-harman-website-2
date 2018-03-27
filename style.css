@@ -1,5 +1,5 @@
 body{
-    background-color: blanchedalmond;
+    background: blanchedalmond;
     padding-top:20px;
 }
 
@@ -17,6 +17,11 @@ h1{
     position: relative;
     float: left;
     margin-right:20px;
+    margin-left:30px;
+}
+
+.jumbotron{
+    border-radius: 2%;
 }
 
 h6{

@@ -3,29 +3,31 @@ var tempDisplay = 0;
 
 $(document).ready( function(){
     hashCatch();
+    tempDisplay = displayContent;
 $(".currentContent").hide();
 $("#content" + displayContent).show();
+$("#button" + displayContent).css("background-color", "white");
 
 $(window).on("hashchange", function(event){
     $(".contentFocus").animate({ height: 'toggle'}, 'slow', 'swing', function () {
-        tempDisplay = displayContent;
         $("#content" + tempDisplay).hide();
+        $("#button" + displayContent).css("background-color", "black");
         hashCatch();
         $("#content" + displayContent).show();
+        $("#button" + displayContent).css("background-color", "white");
+        tempDisplay = displayContent;
       });
     $(".contentFocus").animate({ height: 'toggle'}, 'slow', 'swing');
 })
 
 
 $("#leftArrow").on("click", function () {
-    tempDisplay = displayContent;
         displayContent--;
         overflowCatch();
         hashReverse();
 })
 
 $("#rightArrow").on("click", function () {
-    tempDisplay = displayContent;
         displayContent++;
         overflowCatch();
         hashReverse();
